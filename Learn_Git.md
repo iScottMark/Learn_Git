@@ -52,21 +52,20 @@
 
 ### 1.3 撤销修改
 
-`$ git restore <file>` 丢弃工作区的改动
+`$ git restore <file>` 将不在暂存区的文件撤销更改，**工作区的修改将会丢失**。
 
-`$ git restore -staged <file>` 假如已经 `$ git add <file>`，可以取消暂存，回退到工作区状态，
-若要继续丢弃工作区的改动，则可以再用上述`$ git restore <file>` 命令
+`$ git restore -staged <file>` 假如已经 `$ git add <file>`，可以将文件从暂存区撤出，但不会撤销文件的更改,若要继续丢弃工作区的改动，则可以再用上述`$ git restore <file>` 命令。
 
 ### 1.4 删除文件
 
 `$ rm <file>` 删除文件
 
-情形1：的确想从版本库中删除该文件，`git rm test.txt`，同时`$ git commit`提交删除记录
+情形1：的确想从版本库中删除该文件，`$ git rm test.txt`，同时`$ git commit`提交删除记录
 
-* 此时，若想再恢复则得回退版本；
-* 但若要保存当前版本号，且恢复该文件，可用`git checkout commit_id <file>`从旧版本号里拿出该文件放到当前版本号
+* 此时，若想再恢复则得回退版本，如 `$ git reset --hard commit_id`；
+* 但若要保存当前版本号，且恢复该文件，可用`$ git checkout commit_id <file>`从旧版本号里拿出该文件放到当前版本号
 
-情形2：不小心误删了，想恢复该文件，`git checkout -- <file>`
+情形2：不小心误删了，想恢复该文件，`$ git restore <file>`。
 
 ## 2 远程仓库
 
