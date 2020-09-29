@@ -1,8 +1,8 @@
-# Git 笔记
+# Git Notebook
 
 Written by ***Scott Mark***
 
-[Github 主页](https://github.com/iScottMark)
+[Github Home](https://github.com/iScottMark)
 
 A NOTEBOOK about **Git**
 
