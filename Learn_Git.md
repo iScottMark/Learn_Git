@@ -52,10 +52,9 @@
 
 ### 1.3 撤销修改
 
-`$ git restore <file>` 丢弃工作区的改动
+`$ git restore <file>` 将不在暂存区的文件撤销更改，工作区的修改将会丢失。
 
-`$ git restore -staged <file>` 假如已经 `$ git add <file>`，可以取消暂存，回退到工作区状态，
-若要继续丢弃工作区的改动，则可以再用上述`$ git restore <file>` 命令
+`$ git restore -staged <file>` 假如已经 `$ git add <file>`，可以将文件从暂存区撤出，但不会撤销文件的更改,若要继续丢弃工作区的改动，则可以再用上述`$ git restore <file>` 命令。
 
 ### 1.4 删除文件
 
