@@ -207,3 +207,7 @@ $ git stash drop  # 删除stash内容
 * 此情境下，若想把`master`上的Bug也提交到`dev`上，可以用`$ git cherry-pick <commit_id>`来减少手动重复修改的操作。但要注意的是**针对同一个文件，如`readme.txt`，在`dev`分支下做了修改，然后`stash`，但是bug也出现在`master`分支下的`readme.txt`文件，这样再使用`$ git cherry-pick`就会造成冲突，需要手动`merge`）**
 
 ### 3.5 Feature分支
+
+`restore` `reset` `revert` `checkout`
+
+`merge` `rebase`
