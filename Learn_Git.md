@@ -59,6 +59,7 @@
 ### 1.4 删除文件
 
 `$ rm <file>` 删除文件
+`$ rm -r <directory>` 删除文件夹
 
 情形1：的确想从版本库中删除该文件，`$ git rm test.txt`，同时`$ git commit`提交删除记录
 
@@ -189,7 +190,7 @@ $ git branch -d issue-101 # 删除
 
 现在我们再回到`dev`分支
 
-`$git stash pop` 恢复之前的工作进度，且删除stash中的内容
+`$ git stash pop` 恢复之前的工作进度，且删除stash中的内容
 
 该条命令也可以细化成
 
